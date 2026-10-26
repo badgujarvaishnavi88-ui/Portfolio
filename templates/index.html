@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaishnavi Badgujar | Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons (email, github, linkedin icons) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Devicon (technology logos for skills) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Your CSS (must come AFTER Bootstrap) -->
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">Vaishnavi's Portfolio</a>
+
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-3">
+            <button id="themeBtn" class="btn btn-outline-secondary btn-sm">☀️ Light</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+  <header id="home" class="hero d-flex align-items-center text-white">
+    <div class="container">
+      <div class="row align-items-center text-center text-md-start">
+
+        <!-- Left: profile photo -->
+        <div class="col-md-5 mb-4 mb-md-0 text-center">
+          <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Vaishnavi Badgujar" class="profile-img">
+        </div>
+
+        <!-- Right: text -->
+        <div class="col-md-7">
+          <h1 class="display-4 fw-bold">Hi, I'm Vaishnavi Badgujar</h1>
+
+          <h2 class="h3">
+            I am a
+            <span class="role-box">
+              <span id="roleText" class="role-text">Fresher</span>
+            </span>
+          </h2>
+
+          <p class="lead mt-3">Computer Science Graduate | Building things with code</p>
+
+          <!-- Social icons -->
+          <div class="mb-3">
+            <a href="mailto:badgujarvaishnavi88@gmail.com" class="social-link" title="Email">
+              <i class="bi bi-envelope-fill"></i>
+            </a>
+            <a href="https://github.com/badgujarvaishnavi88-ui" target="_blank" rel="noopener" class="social-link" title="GitHub">
+              <i class="bi bi-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/vaishnavi-badgujar-ab9a75381/" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </div>
+
+          <!-- Buttons -->
+          <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-start">
+            <a href="#projects" class="btn btn-light btn-lg">View My Work</a>
+            <a href="{{ url_for('static', filename='MyCV.pdf') }}" download="Vaishnavi-Badgujar-CV.pdf" class="btn btn-outline-light btn-lg">
+              <i class="bi bi-download me-2"></i>Download CV
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= ABOUT (plain) ================= -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-4">About Me</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <p>
+            I’m Vaishnavi Badgujar, a computer science graduate who enjoys solving problems through code and turning ideas into practical projects. I’m curious by nature and always looking for opportunities to learn new technologies, strengthen my skills, and grow as a developer. I value thoughtful problem-solving, continuous learning, and building useful experiences—one project at a time.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EDUCATION (tinted) ================= -->
+  <section id="education" class="py-5 bg-body-tertiary">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Education</h2>
+
+      <div class="timeline">
+
+        <!-- Graduation -->
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <span class="year-badge">2023 - 2026</span>
+            <h5 class="mt-2 mb-1">B.Sc. Computer Science</h5>
+            <p class="institute mb-1"><i class="bi bi-bank me-2"></i>Dr. Annasaheb G.D. Bendale Mahila Mahavidyalaya, Jalgaon</p>
+            <p class="small mb-2">North Maharashtra University, Jalgaon</p>
+            <span class="grade-badge">CGPA / Percentage: 8.04 / 67.85%</span>
+          </div>
+        </div>
+
+        <!-- HSC -->
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <span class="year-badge">2021 - 2023</span>
+            <h5 class="mt-2 mb-1">HSC (12th) - Science</h5>
+            <p class="institute mb-1"><i class="bi bi-bank me-2"></i>Prakash Vidyalay &amp; Junior College Mothe Waghode</p>
+            <p class="small mb-2">Maharashtra State Board of Secondary and Higher Secondary Education, Pune</p>
+            <span class="grade-badge">Percentage: 79.17%</span>
+          </div>
+        </div>
+
+        <!-- SSC -->
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <span class="year-badge">2021</span>
+            <h5 class="mt-2 mb-1">SSC (10th)</h5>
+            <p class="institute mb-1"><i class="bi bi-bank me-2"></i>Z.T.M. Madhyamik Vidyalay Dhanora</p>
+            <p class="small mb-2">Maharashtra State Board of Secondary and Higher Secondary Education, Pune</p>
+            <span class="grade-badge">Percentage: 83.40%</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS (plain) ================= -->
+  <section id="skills" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Skills</h2>
+
+      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center">
+
+        <div class="col">
+          <div class="skill-box">
+            <i class="devicon-python-plain colored"></i>
+            <h6>Python</h6>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="skill-box">
+            <i class="devicon-html5-plain colored"></i>
+            <h6>HTML</h6>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="skill-box">
+            <i class="devicon-css3-plain colored"></i>
+            <h6>CSS</h6>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="skill-box">
+            <i class="devicon-javascript-plain colored"></i>
+            <h6>JavaScript</h6>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="skill-box">
+            <i class="devicon-bootstrap-plain colored"></i>
+            <h6>Bootstrap</h6>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="skill-box">
+            <i class="devicon-mysql-plain colored"></i>
+            <h6>SQL</h6>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="skill-box">
+            <i class="devicon-c-plain colored"></i>
+            <h6>C</h6>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="skill-box">
+            <i class="devicon-cplusplus-plain colored"></i>
+            <h6>C++</h6>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="skill-box">
+            <i class="devicon-django-plain"></i>
+            <h6>Django</h6>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="skill-box">
+            <i class="devicon-flask-original"></i>
+            <h6>Flask</h6>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="skill-box">
+            <i class="devicon-git-plain colored"></i>
+            <h6>Git</h6>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS (tinted) ================= -->
+  <section id="projects" class="py-5 bg-body-tertiary">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Projects</h2>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+        <div class="col">
+          <div class="card project-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">EduMetrics</h5>
+              <p class="card-text">A simple C program that calculates a student’s total score and average, then assigns a letter grade based on the result.</p>
+              <a href="https://github.com/badgujarvaishnavi88-ui/EduMetrics" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card project-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Project Two</h5>
+              <p class="card-text">A short description of what this project does and the tools used.</p>
+              <a href="#" class="btn btn-primary btn-sm">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card project-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Project Three</h5>
+              <p class="card-text">A short description of what this project does and the tools used.</p>
+              <a href="#" class="btn btn-primary btn-sm">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card project-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Project Two</h5>
+              <p class="card-text">A short description of what this project does and the tools used.</p>
+              <a href="#" class="btn btn-primary btn-sm">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card project-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Project Two</h5>
+              <p class="card-text">A short description of what this project does and the tools used.</p>
+              <a href="#" class="btn btn-primary btn-sm">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card project-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Project Two</h5>
+              <p class="card-text">A short description of what this project does and the tools used.</p>
+              <a href="#" class="btn btn-primary btn-sm">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT (plain) ================= -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-4">Contact Me</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+
+          <!-- Contact links in one row -->
+          <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+            <a href="mailto:badgujarvaishnavi88@gmail.com" class="contact-link">
+              <i class="bi bi-envelope-fill me-2"></i>Email
+            </a>
+            <a href="https://github.com/badgujarvaishnavi88-ui" target="_blank" rel="noopener" class="contact-link">
+              <i class="bi bi-github me-2"></i>GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/vaishnavi-badgujar-ab9a75381/" target="_blank" rel="noopener" class="contact-link">
+              <i class="bi bi-linkedin me-2"></i>LinkedIn
+            </a>
+          </div>
+
+          <!-- Form -->
+          <form id="contactForm" class="needs-validation" novalidate>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" required minlength="2">
+              <div class="invalid-feedback">Please enter your name (min 2 letters).</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required>
+              <div class="invalid-feedback">Please enter a valid email.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="4" required></textarea>
+              <div class="invalid-feedback">Please write a message.</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+            <div id="successMsg" class="alert alert-success mt-3 d-none">
+              ✅ Thank you! Your message is ready to send.
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="text-center py-3">
+    <p class="mb-0">© <span id="year"></span> Vaishnavi Badgujar. All rights reserved.</p>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button id="topBtn" class="btn btn-primary" title="Go to top">↑</button>
+
+  <!-- Bootstrap JS (needed for the mobile menu) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Your JS (at the end so the page is already loaded) -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
